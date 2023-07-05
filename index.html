@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+    <title>Intrinsic Value Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body id="body">
+    <!-- Navigation section -->
+    <!-- Include buttons for light/dark mode and home -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-left">
+          <i class="fas fa-calculator calculator-icon"></i>
+        </div>
+        <div class="navbar-right">
+          <button class="home-button">Home</button>
+          <button id="theme-toggle-button" class="theme-toggle">
+            <i class="fas fa-sun"></i>
+            <!-- Icon for light mode -->
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Middle section -->
+    <!-- Add a title and input fields for user inputs -->
+    <!-- Display the calculated intrinsic value and buy/sell buttons -->
+    <main>
+      <div class="container">
+        <h2 class="section-title">Intrinsic Value Calculator</h2>
+        <form id="calculator-form">
+          <div class="form-group">
+            <label for="stock-input">Stock Ticker:</label>
+            <input type="text" id="stock-input" required placeholder="AAPL" />
+            <!-- <input type="text" placeholder="Enter your name"> -->
+          </div>
+          <div class="form-group">
+            <label for="eps-input">EPS (Earnings Per Share):</label>
+            <input
+              type="number"
+              step="0.01"
+              id="eps-input"
+              required
+              placeholder="11.89"
+            />
+          </div>
+          <div class="form-group">
+            <label for="pe-input">PE Ratio (Price-to-Earnings Ratio):</label>
+            <input
+              type="number"
+              step="0.01"
+              id="pe-input"
+              required
+              placeholder="15.04"
+            />
+          </div>
+          <div class="form-group">
+            <label for="growth-input"
+              >Growth Rate (Expected Growth Rate for Next 5 Years per Annum
+              (%)):</label
+            >
+            <input
+              type="number"
+              step="0.01"
+              id="growth-input"
+              required
+              placeholder="9.86"
+            />
+          </div>
+          <div class="form-group">
+            <label for="discount-input">Discount Rate(%):</label>
+            <input
+              type="number"
+              step="0.01"
+              id="discount-input"
+              required
+              placeholder="9.82"
+            />
+          </div>
+          <div class="form-group">
+            <label for="stock-input">Current Stock Value($):</label>
+            <input
+              type="number"
+              step="0.01"
+              id="stock-input"
+              required
+              placeholder="194.3"
+            />
+          </div>
+          <div class="button-group">
+            <button type="submit" class="calculate-button">
+              Calculate Intrinsic Value
+            </button>
+            <button type="button" class="display-button" disabled>
+              Intrinsic Value
+            </button>
+          </div>
+        </form>
+        <div id="intrinsic-value-result"></div>
+        <div class="buy-sell-buttons">
+          <button class="buy-button">Buy</button>
+          <button class="sell-button">Sell</button>
+        </div>
+      </div>
+    </main>
+
+    <main class="second-section">
+      <div class="container">
+        <div class="links-section">
+          <h3>Having trouble getting the values for your companies?</h3>
+          <p>Here are some links to guide you:</p>
+
+          <div class="links-container">
+            <div class="links-column">
+              <p>EPS link:</p>
+              <a
+                href="https://finance.yahoo.com/quote/aapl"
+                target="_blank"
+                class="link-button"
+                >EPS link button</a
+              >
+
+              <p>Growth rate link:</p>
+              <a
+                href="https://finance.yahoo.com/quote/AAPL/analysis?p=AAPL"
+                target="_blank"
+                class="link-button"
+                >Growth Rate link button</a
+              >
+
+              <p>Current stock value link:</p>
+              <a
+                href="https://finance.yahoo.com/quote/aapl"
+                target="_blank"
+                class="link-button"
+                >Current Stock Value link button</a
+              >
+            </div>
+
+            <div class="links-column">
+              <p>PE Ratio link:</p>
+              <a
+                href="https://finance.yahoo.com/quote/AAPL?ltr=1"
+                target="_blank"
+                class="link-button"
+                >PE Ratio link button</a
+              >
+
+              <p>Discount rate link:</p>
+              <a href="https://finance.yahoo.com/quote/aapl" target="_blank" class="link-button">Discount Rate link button</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+      </div>
+      <div class="made-by">
+        <p>Made with <span class="heart">&#10084;</span> by <a href="#">Your Name</a></p>
+      </div>
+    </footer>
+    
+    
+  </body>
+</html>

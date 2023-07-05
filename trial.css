@@ -1,0 +1,293 @@
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .calculator-icon {
+    font-size: 24px;
+    margin-right: 20px;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .home-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .theme-toggle {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Add CSS styles for the main section */
+  /* main {
+    padding: 40px 20px;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .calculate-button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #intrinsic-value-result {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  .buy-sell-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .buy-button,
+  .sell-button {
+    background-color: lightgray;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: -5px;
+  }
+  
+  .buy-button.active {
+    background-color: green;
+    color: #fff;
+  }
+  
+  .sell-button.active {
+    background-color: red;
+    color: #fff;
+  }
+  
+  .buy-button:last-child,
+  .sell-button:last-child {
+    margin-right: 0;
+  }
+   */
+  /* .button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .display-button {
+    background-color: lightgray;
+    border: none;
+    color: rgb(136, 130, 130);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+  } */
+  
+  /* Add CSS styles for the links section */
+  /* .links-section {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+  }
+  
+  .links-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .link-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .link-item label {
+    margin-right: 10px;
+    font-weight: bold;
+    flex-basis: 100%;
+  }
+  
+  .link-item button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  /* Adjust button width as needed */
+  /* .link-item button {
+    min-width: 150px;
+  } */ 
+
+  /* Add margin between link label and button */
+  /* .link-item button {
+    margin-left: 0;
+  } */
+
+/* Additional CSS styles for the links section */
+/* 
+.links-section {
+  margin-top: 40px;
+}
+
+.links-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links-column {
+  flex: 1;
+}
+
+.link-button {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link-button:hover {
+  opacity: 0.8;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.link-title {
+  margin-right: 10px;
+}
+
+.second-section {
+  background-color: #f2f2f2;
+  padding: 40px 20px;
+}
+
+.second-section .container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.second-section .section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.second-section {
+  font-size: 24px;
+} */
+
+/* Add CSS styles for the footer section */
+/* footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  
+  .footer-content p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .footer-content a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer-content a:hover {
+    opacity: 0.8;
+  }
+  
+  .footer-content span {
+    color: #999;
+  }
+  
+  .footer-content span::after {
+    content: "•";
+    margin: 0 5px;
+  }
+  
+  .footer-content span:last-child::after {
+    content: "";
+  }
+  
+   */ 
