@@ -19,12 +19,12 @@
     <header>
       <nav class="navbar">
         <div class="navbar-left">
-          <i class="fas fa-calculator calculator-icon"></i>
+          <i class="fas fa-calculator calculator-icon"> </i>
         </div>
         <div class="navbar-right">
           <button class="home-button">Home</button>
           <button id="theme-toggle-button" class="theme-toggle">
-            <i class="fas fa-sun"></i>
+            <img class="Sun-image" src="Images/MoonIcon.png" id ="icon" alt="" />
             <!-- Icon for light mode -->
           </button>
         </div>
@@ -34,7 +34,7 @@
     <!-- Middle section -->
     <!-- Add a title and input fields for user inputs -->
     <!-- Display the calculated intrinsic value and buy/sell buttons -->
-    <main class="main">
+    <main class="main bg-color">
       <div class="container">
         <h2 class="section-title">Intrinsic Value Calculator</h2>
         <form id="calculator-form">
@@ -113,10 +113,12 @@
       </div>
     </main>
 
-    <main class="second-section">
+    <main class="second-section bg-color">
       <div class="container">
         <div class="links-section">
-          <h3 class="link-title">Having trouble getting the values for your companies?</h3>
+          <h3 class="link-title">
+            Having trouble getting the values for your companies?
+          </h3>
           <p class="description">Here are some links to guide you:</p>
 
           <div class="links-container">
@@ -156,7 +158,12 @@
               >
 
               <p>Discount rate link:</p>
-              <a href="https://finance.yahoo.com/quote/aapl" target="_blank" class="link-button">Discount Rate link button</a>
+              <a
+                href="https://finance.yahoo.com/quote/aapl"
+                target="_blank"
+                class="link-button"
+                >Discount Rate link button</a
+              >
             </div>
           </div>
         </div>
@@ -165,13 +172,29 @@
 
     <footer>
       <div class="footer-content">
-        <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+        <p>&copy; 2023 Intrinsic Value Calculator. All rights reserved.</p>
       </div>
       <div class="made-by">
-        <p>Made with <span class="heart">&#10084;</span> by <a href="#">Your Name</a></p>
+        <p>
+          Made with <span class="heart">&#10084;</span> by
+          <a class="Name" href="https://rpatel0022.github.io/Portfolio/">Rushi Patel</a>
+        </p>
       </div>
     </footer>
-    
-    
+
+    <script>
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+          document.body.classList.toggle("dark-theme"); 
+          if(document.body.classList.contains("dark-theme")){
+            icon.src = "Images/Sun-Icon.png"; 
+          }
+          else{
+            icon.src = "Images/MoonIcon.png"; 
+          }
+        }
+    </script>
+
   </body>
 </html>

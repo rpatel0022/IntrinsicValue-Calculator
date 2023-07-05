@@ -1,9 +1,11 @@
-function toggleTheme() {
-    document.body.classList.toggle('dark-mode');
+var icon = document.getElementById("icon");
+
+icon.onclick = function(){
+  document.body.classList.toggle("dark-theme"); 
+  if(document.body.classList.contains("dark-theme")){
+    icon.src = "Images/Sun-Icon.png"; 
   }
-  
-  // Event listener for the theme toggle button
-  const themeToggleBtn = document.getElementById('theme-toggle-button');
-  themeToggleBtn.addEventListener('click', toggleTheme);
-  
-  
+  else{
+    icon.src = "Images/Sun-Icon.png"; 
+  }
+}
