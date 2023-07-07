@@ -24,7 +24,7 @@
         <div class="navbar-right">
           <button class="home-button">Home</button>
           <button id="theme-toggle-button" class="theme-toggle">
-            <img class="Sun-image" src="Images/MoonIcon.png" id ="icon" alt="" />
+            <img class="Sun-image" src="Images/MoonIcon.png" id="icon" alt="" />
             <!-- Icon for light mode -->
           </button>
         </div>
@@ -170,6 +170,109 @@
       </div>
     </main>
 
+    <section class="Section">
+      <div class="Faq-container">
+        <h2 class="FAQ-title">FAQs:</h2>
+        <div class="accordion-item" id="question1">
+          <a class="accordion-link" href="#question1">
+            <p>What is Intrinsic Value?</p>
+            <ion-icon name="add" class="icon-add"></ion-icon>
+            <ion-icon name="remove" class="icon-remove"></ion-icon>
+          </a>
+          <div class="answer">
+            In finance and investing, intrinsic value refers to the perceived or
+            calculated value of a financial asset, such as a stock, based on its
+            underlying fundamentals. It is the estimated value of an asset
+            independent of its current market price. 
+
+            
+
+            When it comes to stocks,
+            intrinsic value represents the true worth of a company's shares
+            based on factors such as its earnings, cash flows, assets, growth
+            potential, and other relevant financial metrics. It is an attempt to
+            determine the underlying value of a stock, taking into account its
+            future earnings potential and the present value of those earnings.
+          </div>
+        </div>
+
+        <div class="accordion-item" id="question2">
+          <a class="accordion-link" href="#question2">
+            <p>What is EPS?</p>
+            <ion-icon name="add" class="icon-add"></ion-icon>
+            <ion-icon name="remove" class="icon-remove"></ion-icon>
+          </a>
+          <div class="answer">
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quia commodi, omnis corporis tenetur ad
+            accusantium explicabo molestias assumenda natus blanditiis debitis
+            dolores eligendi animi aliquam ipsum quo consequuntur dolore!
+            Doloribus!
+          </div>
+        </div>
+
+        <div class="accordion-item" id="question3">
+          <a class="accordion-link" href="#question3">
+            <p>What is PE Ratio?</p>
+            <ion-icon name="add" class="icon-add"></ion-icon>
+            <ion-icon name="remove" class="icon-remove"></ion-icon>
+          </a>
+          <div class="answer">
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quia commodi, omnis corporis tenetur ad
+            accusantium explicabo molestias assumenda natus blanditiis debitis
+            dolores eligendi animi aliquam ipsum quo consequuntur dolore!
+            Doloribus!
+          </div>
+        </div>
+
+        <div class="accordion-item" id="question4">
+          <a class="accordion-link" href="#question4">
+            <p>What is Growth rate?</p>
+            <ion-icon name="add" class="icon-add"></ion-icon>
+            <ion-icon name="remove" class="icon-remove"></ion-icon>
+          </a>
+          <div class="answer">
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quia commodi, omnis corporis tenetur ad
+            accusantium explicabo molestias assumenda natus blanditiis debitis
+            dolores eligendi animi aliquam ipsum quo consequuntur dolore!
+            Doloribus!
+          </div>
+        </div>
+
+        <div class="accordion-item" id="question5">
+          <a class="accordion-link" href="#question5">
+            <p>What is Discount rate?</p>
+            <ion-icon name="add" class="icon-add"></ion-icon>
+            <ion-icon name="remove" class="icon-remove"></ion-icon>
+          </a>
+          <div class="answer">
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quia commodi, omnis corporis tenetur ad
+            accusantium explicabo molestias assumenda natus blanditiis debitis
+            dolores eligendi animi aliquam ipsum quo consequuntur dolore!
+            Doloribus!
+          </div>
+        </div>
+
+        <div class="accordion-item" id="question6">
+          <a class="accordion-link" href="#question6">
+            <p>How accurate is this model?</p>
+            <ion-icon name="add" class="icon-add"></ion-icon>
+            <ion-icon name="remove" class="icon-remove"></ion-icon>
+          </a>
+          <div class="answer">
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quia commodi, omnis corporis tenetur ad
+            accusantium explicabo molestias assumenda natus blanditiis debitis
+            dolores eligendi animi aliquam ipsum quo consequuntur dolore!
+            Doloribus!
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <div class="footer-content">
         <p>&copy; 2023 Intrinsic Value Calculator. All rights reserved.</p>
@@ -177,24 +280,46 @@
       <div class="made-by">
         <p>
           Made with <span class="heart">&#10084;</span> by
-          <a class="Name" href="https://rpatel0022.github.io/Portfolio/">Rushi Patel</a>
+          <a class="Name" href="https://rpatel0022.github.io/Portfolio/"
+            >Rushi Patel</a
+          >
         </p>
       </div>
     </footer>
 
     <script>
-        var icon = document.getElementById("icon");
+      var icon = document.getElementById("icon");
 
-        icon.onclick = function(){
-          document.body.classList.toggle("dark-theme"); 
-          if(document.body.classList.contains("dark-theme")){
-            icon.src = "Images/Sun-Icon.png"; 
-          }
-          else{
-            icon.src = "Images/MoonIcon.png"; 
-          }
+      icon.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")) {
+          icon.src = "Images/Sun-Icon.png";
+        } else {
+          icon.src = "Images/MoonIcon.png";
         }
+      };
     </script>
 
+    <script>
+      // Get all the faq-question elements
+      const faqQuestions = document.querySelectorAll(".faq-question");
+
+      // Add click event listeners to each question
+      faqQuestions.forEach((question) => {
+        question.addEventListener("click", () => {
+          // Toggle the active class to expand or collapse the answer
+          question.parentNode.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

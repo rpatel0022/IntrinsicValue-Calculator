@@ -354,4 +354,73 @@ footer {
   color: var(--light-grey)
 }
 
+.Section{
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .Faq-container{
+    width: 750px; 
+    max-width: 80rem;
+  }
+  
+  .accordion-item{
+    background-color: var(--button-color);
+    border-radius: 1.0rem;
+    margin-bottom: 1rem;
+    box-shadow: .5rem 2px .5rem rgb(227, 210, 210, 0.1);
+  }
+  
+  .accordion-link{
+    border-radius: 1.0rem;
+    font-size: 1.0rem;
+    color: var(--light-grey); 
+    text-decoration: none;
+    background-color: var(--button-color);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
 
+  .accordion-link{
+    padding: .5rem;
+
+  }
+
+  .accordion-link .icon-remove{
+    display: none;
+  }
+  
+  .answer{
+    max-height: 0;
+    overflow: hidden;
+    position: relative; 
+    background-color: var(--bg-color);
+    transition: max-height 650ms;
+  }
+
+  .answer p{
+    color: var(--light-grey);
+    font-size: 1.4rem;
+    padding: 2rem;
+  }
+
+  .accordion-item:target .answer{
+    max-height: 20rem;
+  }
+
+  .accordion-item:target .accordion-link .icon-add{
+    display: none;
+  }
+
+  .accordion-item:target .accordion-link .icon-remove{
+    display: block;
+  }
+
+  .FAQ-title{
+    font-size: 35px;
+  }
