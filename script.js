@@ -60,3 +60,28 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const faqQuestions = document.querySelectorAll(".faq-question");
+
+  faqQuestions.forEach((question) => {
+    question.addEventListener("click", () => {
+      // Toggle the active class to expand or collapse the answer
+      question.parentNode.classList.toggle("active");
+    });
+  });
+
+}); 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var icon = document.getElementById("icon");
+
+  icon.onclick = function () {
+    document.body.classList.toggle("dark-theme");
+    if (document.body.classList.contains("dark-theme")) {
+      icon.src = "Images/Sun-Icon.png";
+    } else {
+      icon.src = "Images/MoonIcon.png";
+    }
+  };
+}); 
