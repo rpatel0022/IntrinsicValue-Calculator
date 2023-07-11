@@ -18,14 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const discount = parseFloat(document.getElementById('discount-input').value);
     const currentStockValue = parseFloat(document.getElementById('stock-input').value);
 
-    console.log(buyButton)
-    console.log(sellButton)
-    console.log(EPS)
-    console.log(peRatio)
-    console.log(Growth_rate)
-    console.log(discount)
-    console.log(currentStockValue)
-
     // Perform the calculations
     const margin_safety_growth_rate = Growth_rate * (1 - 0.25) 
     const growth_rate_decimal = margin_safety_growth_rate / 100 
@@ -41,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log(typeof Final_intrinsic_value);
     console.log(typeof currentStockValue);
+    console.log(currentStockValue)
 
     if (currentStockValue < Final_intrinsic_value) {
       buyButton.style.backgroundColor = 'green';
@@ -53,4 +46,17 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Get reference to the reset button
+  const resetButton = document.querySelector('.reset-button');
+
+  // Add event listener to the reset button
+  resetButton.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent button click from submitting the form
+
+    // Reload the page
+    location.reload();
+  });
+});
 

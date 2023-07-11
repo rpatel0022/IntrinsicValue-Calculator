@@ -39,8 +39,8 @@
         <h2 class="section-title">Intrinsic Value Calculator</h2>
         <form id="calculator-form">
           <div class="form-group">
-            <label for="stock-input">Stock Ticker:</label>
-            <input type="text" id="stock-input" required placeholder="AAPL" />
+            <label for="stock-ticker">Stock Ticker:</label>
+            <input type="text" id="stock-ticker" required placeholder="AAPL" />
             <!-- <input type="text" placeholder="Enter your name"> -->
           </div>
           <div class="form-group">
@@ -105,11 +105,14 @@
             </button>
           </div>
         </form>
-        <div id="intrinsic-value-result"></div>
-        <div class="buy-sell-buttons">
-          <button class="buy-button">Buy</button>
-          <button class="sell-button">Sell</button>
-        </div>
+        <div class="contain">
+          <div id="intrinsic-value-result"></div>
+          <div class="buy-sell-buttons">
+            <button class="buy-button">    Buy </button>
+            <button class="sell-button">Not a buy</button>
+          </div>
+          <button class="reset-button">Reset</button> 
+      </div>
       </div>
     </main>
 
