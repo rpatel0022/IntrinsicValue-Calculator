@@ -1,34 +1,56 @@
-// Function to handle form submission
-console.log("Hello World"); 
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Get references to the form and display button
+  const form = document.getElementById('calculator-form');
+  const displayButton = document.querySelector('.display-button');
 
-// function calculateIntrinsicValue(event) {
-//   event.preventDefault();
+  const buyButton = document.querySelector('.buy-button');
+  const sellButton = document.querySelector('.sell-button');
 
-//   // Get input values from the form
-//   const stockTicker = document.getElementById('stock-input').value;
-//   const eps = parseFloat(document.getElementById('eps-input').value);
-//   const peRatio = parseFloat(document.getElementById('pe-input').value);
-//   const growthRate = parseFloat(document.getElementById('growth-input').value);
-//   const discountRate = parseFloat(document.getElementById('discount-input').value);
-//   const currentStockValue = parseFloat(document.getElementById('stock-input').value);
+  // Add event listener to the form submission
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission from reloading the page
 
-//   // Perform calculations
-//   const intrinsicValue = (eps * (1 + growthRate / 100) * (1 - Math.pow(1 + discountRate / 100, -5))) / (peRatio / 100);
-//   const marginOfSafety = intrinsicValue - currentStockValue;
+    // Retrieve input values
+    const EPS = parseFloat(document.getElementById('eps-input').value);
+    const peRatio = parseFloat(document.getElementById('pe-input').value);
+    const Growth_rate = parseFloat(document.getElementById('growth-input').value);
+    const discount = parseFloat(document.getElementById('discount-input').value);
+    const currentStockValue = parseFloat(document.getElementById('stock-input').value);
 
-//   // Display results
-//   const resultElement = document.getElementById('intrinsic-value-result');
-//   resultElement.innerHTML = `
-//     <p>Intrinsic Value: $${intrinsicValue.toFixed(2)}</p>
-//     <p>Margin of Safety: $${marginOfSafety.toFixed(2)}</p>
-//   `;
+    console.log(buyButton)
+    console.log(sellButton)
+    console.log(EPS)
+    console.log(peRatio)
+    console.log(Growth_rate)
+    console.log(discount)
+    console.log(currentStockValue)
 
-//   // Enable the display button
-//   const displayButton = document.querySelector('.display-button');
-//   displayButton.disabled = false;
-// }
+    // Perform the calculations
+    const margin_safety_growth_rate = Growth_rate * (1 - 0.25) 
+    const growth_rate_decimal = margin_safety_growth_rate / 100 
 
-// // Event listener for form submission
-// const calculatorForm = document.getElementById('calculator-form');
-// calculatorForm.addEventListener('submit', calculateIntrinsicValue);
+    const Intrinsic_value = EPS * peRatio * (1 + growth_rate_decimal) ** 5
+    const Final_intrinsic_value = (Intrinsic_value / (1 + (discount/100)) ** 5) 
+
+    // Update the display button with the result
+    displayButton.textContent = 'Intrinsic Value: ' + Final_intrinsic_value.toFixed(2);
+    displayButton.disabled = false;
+
+    displayButton.classList.add('highlight');
+
+    console.log(typeof Final_intrinsic_value);
+    console.log(typeof currentStockValue);
+
+    if (currentStockValue < Final_intrinsic_value) {
+      buyButton.style.backgroundColor = 'green';
+      sellButton.style.backgroundColor = ''; // Remove any previous styling
+    } else {
+      sellButton.style.backgroundColor = 'red';
+      buyButton.style.backgroundColor = ''; // Remove any previous styling
+    }
+
+  });
+});
+
 

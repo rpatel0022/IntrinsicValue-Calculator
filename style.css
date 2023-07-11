@@ -424,3 +424,11 @@ footer {
   .FAQ-title{
     font-size: 35px;
   }
+
+  .highlight {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    /* Add any other desired styling */
+  }
+  
