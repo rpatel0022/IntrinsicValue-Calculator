@@ -65,13 +65,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
   faqQuestions.forEach((question) => {
     question.addEventListener("click", () => {
-      // Toggle the active class to expand or collapse the answer
-      question.parentNode.classList.toggle("active");
+      const answer = question.nextElementSibling;
+
+      // Toggle the visibility of the answer
+      answer.classList.toggle("active");
+
+      if (answer.classList.contains("active")) {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      } else {
+        answer.style.maxHeight = null;
+      }
     });
   });
-
-}); 
-
+});
 
 document.addEventListener('DOMContentLoaded', function() {
   var icon = document.getElementById("icon");

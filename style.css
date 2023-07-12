@@ -406,22 +406,22 @@ footer {
     display: none;
   }
   
-  .answer{
+  .answer {
     max-height: 0;
     overflow: hidden;
-    position: relative; 
     background-color: var(--bg-color);
-    transition: max-height 650ms;
+    transition: max-height 0.5s;
   }
-
-  .answer p{
-    color: var(--light-grey);
-    font-size: 1.4rem;
-    padding: 2rem;
+  
+  .answer p {
+    color: black;
+    font-size: 0.8 rem;
+    /* padding: 2rem; */
   }
-
-  .accordion-item:target .answer{
-    max-height: 20rem;
+  
+  .accordion-item:target .answer {
+    max-height: 500px;
+    transition: max-height 0.5s;
   }
 
   .accordion-item:target .accordion-link .icon-add{
@@ -431,7 +431,7 @@ footer {
   .accordion-item:target .accordion-link .icon-remove{
     display: block;
   }
-
+  
   .FAQ-title{
     font-size: 35px;
   }
